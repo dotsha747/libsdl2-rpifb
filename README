@@ -1,0 +1,14 @@
+This is a quick-and-dirty rebuild of libsdl2 for raspbian (stretch), where I configured it for use with the raspberry pi's frame buffer and removed the X11 dependencies for use in lite installations.
+
+The .deb packages are named libsdl2-rpifb. They install into the same paths as the real libsdl2, so you cannot install both simultaneously.
+
+See my other notes http://blog.shahada.abubakar.net/post/hardware-accelerated-sdl-2-on-raspberry-pi.
+
+Pre-build .debs are available (for libsdl2 and libsdl2-ttf only (for now)):
+- wget -O- http://repo.shahada.abubakar.net/pubkey.asc | sudo apt-key add -
+- cd /etc/apt/sources.list.d
+- sudo wget http://repo.shahada.abubakar.net/repo.shahada.abubakar.net.sources.list
+- sudo apt-get update
+- sudo apt-get install libsdl2-rpifb libsdl2-rpifb-ttl
+- sudo apt-get install libsdl2-rpifb-dev libsdl2-rpifb-ttl-dev
+
