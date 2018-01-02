@@ -13,4 +13,9 @@ cd libsdl2-ttf/SDL2_ttf-2.0.14
 dpkg-buildpackage
 cd ../..
 
-find . -type name \*.deb -print
+cd libsdl2-image/SDL2_image-2.0.2
+dpkg-buildpackage
+cd ../..
+
+find . -type name \*.deb -exec scp {} ${DEBREPOUSER}@${DEBREPOHOST}:${DEBREPODIR}/pool/main/ \;
+ssh ${DEBREPOUSER}@${DEBREPOHOST} "cd ${DEBREPODIR}; reindex_apt.sh"

@@ -1,0 +1,43 @@
+Source: libsdl2-rpifb-image
+Section: libs
+Priority: optional
+Maintainer: shahada abubakar <shahada@abubakar.net>
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8.9.0~),
+               dh-autoreconf,
+               dpkg-dev (>= 1.16.1~),
+               libsdl2-rpifb-dev (>= 2.0.0),
+               libjpeg-dev,
+               libpng-dev,
+               libtiff5-dev,
+               zlib1g-dev
+Homepage: http://www.libsdl.org/projects/SDL_image/
+
+Package: libsdl2-rpifb-image
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Image loading library for Simple DirectMedia Layer 2.0
+ This is a simple library to load images of various formats as SDL surfaces.
+ This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
+ formats.
+ .
+ This package contains the shared library.
+
+Package: libsdl2-rpifb-image-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         libsdl2-rpifb-image (= ${binary:Version}),
+         libc6-dev,
+         libsdl2-rpifb-dev (>= 2.0.0)
+Description: development files for SDL 2.0 image loading library
+ This is a simple library to load images of various formats as SDL surfaces.
+ This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
+ formats.
+ .
+ This package contains files needed if you wish to use the SDL image
+ library in your own programs.
