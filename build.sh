@@ -7,6 +7,8 @@ cd libsdl2/SDL2-2.0.7
 dpkg-buildpackage
 cd ../..
 
+sudo dpkg --install libsdl2/libsdl2-rpifb_2.0.7_armhf.deb libsdl2/libsdl2-rpifb-dev_2.0.7_armhf.deb
+
 cd libsdl2-ttf/SDL2_ttf-2.0.14
 dpkg-buildpackage
 cd ../..
