@@ -2,7 +2,7 @@ libsdl2-rpifb-ttf (2.0.14) UNRELEASED; urgency=medium
 
   * changed dependency to libsdl2-rpifb
 
- -- shahada abubajar <shahada@abubakar.net>  Mon, 01 Jan 2017 12:55:12 +0800
+ -- shahada abubakar <shahada@abubakar.net>  Mon, 01 Jan 2017 12:55:12 +0800
 
 libsdl2-ttf (2.0.14) UNRELEASED; urgency=medium
 
